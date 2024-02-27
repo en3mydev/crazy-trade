@@ -20,7 +20,7 @@ const DashboardHeader = () => {
   const handleOk = async () => {
     try {
       const userId = localStorage.getItem("userId");
-      await axios.post("https://crazy-trade.vercel.app/deposit", {
+      await axios.post("https://crazy-trade-server.vercel.app/deposit", {
         amount: depositAmount,
         userId: userId,
       });

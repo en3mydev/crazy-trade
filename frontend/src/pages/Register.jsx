@@ -19,7 +19,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post("https://crazy-trade.vercel.app/register", {
+      await axios.post("https://crazy-trade-server.vercel.app/register", {
         firstName: formatText(firstName),
         lastName: formatText(lastName),
         email,

@@ -101,7 +101,7 @@ const WatchlistTable = () => {
   const handleOk = async () => {
     try {
       const userId = localStorage.getItem("userId");
-      await axios.post("https://crazy-trade.vercel.app/transfer", {
+      await axios.post("https://crazy-trade-server.vercel.app/transfer", {
         amount: modalInputDollars,
         userId: userId,
         transferType: "buy",

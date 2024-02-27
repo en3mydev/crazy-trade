@@ -22,7 +22,7 @@ const Profile = () => {
       try {
         const userId = localStorage.getItem("userId");
         const response = await axios.get(
-          `https://crazy-trade.vercel.app/user/${userId}`
+          `https://crazy-trade-server.vercel.app/user/${userId}`
         );
 
         setUserProfile(response.data);
@@ -44,7 +44,7 @@ const Profile = () => {
     }
 
     try {
-      await axios.post(`https://crazy-trade.vercel.app/changepassword/`, {
+      await axios.post(`https://crazy-trade-server.vercel.app/changepassword/`, {
         userId: userProfile._id,
         oldPassword,
         newPassword,

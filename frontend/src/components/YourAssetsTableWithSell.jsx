@@ -158,7 +158,7 @@ const YourAssetsTableWithSell = ({ userProfile, dataLoaded }) => {
   const handleSellOk = async () => {
     try {
       const userId = localStorage.getItem("userId");
-      await axios.post("https://crazy-trade.vercel.app/transfer", {
+      await axios.post("https://crazy-trade-server.vercel.app/transfer", {
         amount: (modalInput * selectedAsset.price).toFixed(4),
         userId: userId,
         transferType: "sell",

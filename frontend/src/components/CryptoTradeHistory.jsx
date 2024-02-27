@@ -11,7 +11,7 @@ const CryptoTradeHistory = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://crazy-trade.vercel.app/trade-history/${userId}`
+          `https://crazy-trade-server.vercel.app/trade-history/${userId}`
         );
         setHistory(response.data);
         setDataLoaded(true);

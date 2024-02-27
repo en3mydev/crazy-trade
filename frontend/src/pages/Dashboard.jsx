@@ -16,7 +16,7 @@ const Dashboard = () => {
       try {
         const userId = localStorage.getItem("userId");
         const response = await axios.get(
-          `https://crazy-trade.vercel.app/user/${userId}`
+          `https://crazy-trade-server.vercel.app/user/${userId}`
         );
         setDataLoaded(true);
       } catch (error) {

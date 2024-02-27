@@ -15,7 +15,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "https://crazy-trade.vercel.app/login",
+        "https://crazy-trade-server.vercel.app/login",
         {
           email: loginEmail,
           password: loginPassword,

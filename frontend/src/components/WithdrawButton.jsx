@@ -19,7 +19,7 @@ const WithdrawButton = () => {
   const handleOk = async () => {
     try {
       const userId = localStorage.getItem("userId");
-      await axios.post("https://crazy-trade.vercel.app/withdraw", {
+      await axios.post("https://crazy-trade-server.vercel.app/withdraw", {
         amount: depositAmount,
         userId: userId,
       });
