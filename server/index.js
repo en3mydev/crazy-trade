@@ -7,10 +7,13 @@ const jwt = require("jsonwebtoken");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.use(cors());
 
 
-app.options('*', cors());
+app.use(cors({ origin: "https://crazy-trade-frontend.vercel.app", credentials: true }));
+app.options('*', cors({ origin: "https://crazy-trade-frontend.vercel.app", credentials: true }))
+
 
 app.get("/", (req, res) => {
   res.send("Server is running");
