@@ -1,0 +1,120 @@
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 30rem;
+  height: 80vh;
+  background-color: var(--background);
+}
+
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Adjust the alignment to flex-start */
+}
+
+.hero-img {
+  width: 30%;
+  height: auto;
+  align-self: flex-start; /* Adjust the alignment to flex-start */
+  margin-top: 80px; /* Add margin-top to lower the image */
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.hero-form input {
+  width: 30rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.hero-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-form input {
+  width: 15rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  border: 2px solid #ddd9d9;
+}
+
+.hero-form button {
+  border: none;
+  border-radius: 25px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out;
+  padding: 1rem 2rem;
+}
+
+.hero-form button:hover {
+  background-color: #3f3f46;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 50%;
+    height: auto;
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .hero-form {
+    align-items: center;
+  }
+
+  .hero-form input {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+}

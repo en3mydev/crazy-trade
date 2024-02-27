@@ -1,0 +1,76 @@
+.banner-download {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  padding: 6rem 22rem;
+}
+
+.banner-download__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  padding: 0 2rem;
+}
+
+.banner-download__left h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.banner-download__left h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: var(--secondary);
+  margin-top: 0.4rem;
+}
+
+.banner-download__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner-download__btns img {
+  width: 150px;
+  padding-top: 10px;
+  margin-bottom: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.banner-download__right img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-download {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 2rem;
+    gap: 2rem;
+  }
+
+  .banner-download__left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner-download__btns {
+    justify-content: center;
+  }
+
+  .banner-download__btns img {
+    width: 150px;
+    padding-top: 10px;
+    margin-bottom: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+}

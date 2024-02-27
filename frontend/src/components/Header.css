@@ -1,0 +1,111 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 22rem;
+  background-color: var(--background);
+}
+
+.header__middle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__middle a {
+  background-color: #f4f4f5;
+  padding: 0.8rem 1.6rem;
+  transition: 0.3s ease-in-out;
+}
+
+.header__middle a:hover {
+  background-color: #e4e4e7;
+}
+
+.header__middle a:first-child {
+  border-radius: 2rem 0.7rem 0.7rem 2rem;
+}
+
+.header__middle a:last-child {
+  border-radius: 0.7rem 2rem 2rem 0.7rem;
+}
+
+.header__middle a:nth-child(2) {
+  border-radius: 0.7rem;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.login-button {
+  background-color: #f4f4f5 !important;
+  border: none;
+  border-radius: 2rem 0.7rem 0.7rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Public Sans", sans-serif;
+  transition: background-color 0.3s ease-in-out;
+  color: var(--text);
+  padding: 0.8rem 1.6rem;
+}
+
+.login-button:hover {
+  background-color: #e4e4e7 !important;
+}
+
+.register-button {
+  background-color: var(--primary);
+  color: #ffffff !important;
+  border: none;
+  border-radius: 0.7rem 2rem 2rem 0.7rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.register-button:hover {
+  background-color: #3f3f46;
+}
+
+.header__left a {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+    justify-content: center;
+  }
+
+  .header__middle {
+    display: none;
+  }
+
+  .header__right {
+    display: none;
+  }
+  .header__left p {
+    text-align: center;
+  }
+
+  .header__left a {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary);
+  }
+}
