@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "*",
+    origin: "https://crazy-trade-frontend.vercel.app/",
     methods: ["POST", "GET"],
     credentials: true,
   })
