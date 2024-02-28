@@ -24,7 +24,7 @@ const WatchlistTable = () => {
           "dogecoin",
         ];
         const idString = topCryptoIds.join(",");
-        const apiUrl = `/api/coins/markets?vs_currency=usd&ids=${idString}&order=market_cap_desc&sparkline=false&price_change_percentage=24h&x_cg_demo_api_key=CG-R8ixrSUVUi84NCA9JyGPiAA3`;
+        const apiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${idString}&order=market_cap_desc&sparkline=false&price_change_percentage=24h`;
 
         const res = await fetch(apiUrl);
         if (res.ok) {
