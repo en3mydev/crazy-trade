@@ -20,12 +20,6 @@ const Login = () => {
           email: loginEmail,
           password: loginPassword,
         },
-        {
-          withCredentials: true, // include credențiale în cerere
-          headers: {
-            "Content-Type": "application/json", // asigură-te că se specifică tipul de conținut
-          },
-        }
       );
 
       if (response.status === 200) {
