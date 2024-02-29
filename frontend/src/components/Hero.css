@@ -64,25 +64,25 @@
   border: 2px solid #ddd9d9;
 }
 
-.hero-form button {
-  border: none;
-  border-radius: 25px;
-  background-color: var(--primary);
-  color: #fff;
-  font-size: 0.9rem;
-  cursor: pointer;
-  font-family: "Public Sans", sans-serif;
-  font-weight: 600;
-  transition: background-color 0.3s ease-in-out;
-  padding: 1rem 2rem;
-}
 
-.hero-form button:hover {
+.hero-button:hover {
   background-color: #3f3f46;
 }
 
 .hero-button {
   width: 100%;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem 0.5rem;
 }
 
 /* Responsive Styles */
@@ -124,4 +124,10 @@
   .hero-button {
     width: 75%;
   }
+}
+
+@media screen and (max-width: 1600px){
+  .hero-content {
+    padding: 0 20rem;
+  }  
 }

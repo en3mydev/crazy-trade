@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeroIMG from "../images/homepage/iphonehero.png";
 import "./Hero.css";
 
@@ -14,7 +15,7 @@ const Hero = () => {
             className="hero-input"
             autoComplete="off"
           />
-          <button className="hero-button">Get Started</button>
+          <Link to="register" className="hero-button">Get Started</Link>
         </form>
       </div>
       <img src={HeroIMG} alt="hero" className="hero-img" />
