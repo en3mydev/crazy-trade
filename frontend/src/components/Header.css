@@ -73,6 +73,7 @@
   font-family: "Public Sans", sans-serif;
   font-weight: 500;
   transition: background-color 0.3s ease-in-out;
+  width: 80%;
 }
 
 .register-button:hover {
@@ -85,11 +86,76 @@
   color: var(--primary);
 }
 
+.mobile-navbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  background-color: #ffffff;
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobile-navbar__close {
+  font-size: 2rem;
+  position: absolute;
+  top: 3.5rem;
+  right: 3.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mobile-navbar__close:hover {
+  color: var(--primary);
+}
+
+.mobile-navbar__links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-size: 2rem;
+  gap: 3rem;
+  text-align: center;
+  margin-right: 2.5rem;
+}
+
+.mobile-navbar__links li a {
+  text-decoration: none;
+  color: #010103;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.mobile-navbar__links li a:hover {
+  color: #de8117;
+}
+
+.open-nav {
+  left: 0;
+}
+
+.mobile-hamb {
+  font-size: 2.8rem;
+  display: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mobile-hamb:hover {
+  color: var(--primary);
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .header {
-    padding: 0 1rem;
-    justify-content: center;
+    padding: 0 1.8rem;
+    display: flex;
+    margin-top: 2rem;
   }
 
   .header__middle {
@@ -104,8 +170,11 @@
   }
 
   .header__left a {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 900;
     color: var(--primary);
+  }
+  .mobile-hamb {
+    display: flex;
   }
 }

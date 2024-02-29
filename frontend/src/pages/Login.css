@@ -143,3 +143,37 @@
 .forgot-password {
   margin-top: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .login-form {
+    width: 70%;
+    margin-top: 4rem;
+  }
+
+  .login-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .login-email,
+  .login-password {
+    padding: 1rem 1.2rem;
+  }
+
+  .login-form button {
+    padding: 1rem 2rem;
+  }
+
+  .login-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .login-page {
+    height: 100%;
+  }
+
+  .login-header__left a {
+    font-size: 2rem;
+  }
+}

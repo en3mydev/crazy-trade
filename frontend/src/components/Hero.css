@@ -81,6 +81,10 @@
   background-color: #3f3f46;
 }
 
+.hero-button {
+  width: 100%;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hero-content {
