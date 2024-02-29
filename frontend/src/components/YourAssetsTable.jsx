@@ -102,7 +102,7 @@ const YourAssetsTable = ({ userProfile, dataLoaded }) => {
   return (
     <div className="assets-table">
       <h2>Your Assets</h2>
-      <Table columns={columns} dataSource={assets} />
+      <Table columns={columns} dataSource={assets} className="table-assets"/>
     </div>
   );
 };
