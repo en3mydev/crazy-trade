@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect("mongodb+srv://danielgheorghedev:LxBAhoWWcj0BX5M0@cluster0.fgwbsrb.mongodb.net/accounts")
   .then(() => {
     console.log("Connected to the database");
   })
