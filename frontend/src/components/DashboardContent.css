@@ -90,6 +90,7 @@
   }
   .watchlist-table {
     margin: 1rem 0;
+    width: 100%;
   }
   .dashboard-welcome {
     padding: 1rem 0;
