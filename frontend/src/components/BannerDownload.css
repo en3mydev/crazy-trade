@@ -55,6 +55,7 @@
     flex-direction: column;
     padding: 6rem 2rem;
     gap: 2rem;
+    max-width: 90%;
   }
 
   .banner-download__left {
@@ -67,10 +68,6 @@
   }
 
   .banner-download__btns img {
-    width: 150px;
-    padding-top: 10px;
-    margin-bottom: 2px;
-    flex-shrink: 0;
-    cursor: pointer;
+    width: 120px;
   }
 }

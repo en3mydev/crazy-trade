@@ -43,4 +43,7 @@
   .footer__left img {
     width: 80px;
   }
+  .footer__right {
+    flex-direction: column;
+  }
 }
