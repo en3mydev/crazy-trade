@@ -247,9 +247,9 @@ app.post("/withdraw", async (req, res) => {
 });
 
 app.get("/trade-history/:userId", async (req, res) => {
-  const userId = req.params.id;
+  const userIdd = req.params.id;
 
-  const user = await Transaction.find({ ObjectId: userId });
+  const user = await Transaction.find({ userId: userIdd });
 
   if (!user) {
     return res.status(404).json({ message: "User not found" });
