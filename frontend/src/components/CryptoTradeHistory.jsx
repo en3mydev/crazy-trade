@@ -28,6 +28,14 @@ const CryptoTradeHistory = () => {
     return newDate.toLocaleDateString() + " " + newDate.toLocaleTimeString();
   };
 
+  const sortTransactionsByNewest = (transactions) => {
+    return transactions?.sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    });
+  };
+
+  sortTransactionsByNewest(history);
+
   const data = history.map((item) => {
     return {
       key: item._id,

@@ -4,6 +4,7 @@ const { Customer, Transaction } = require("./mongo");
 const app = express();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const mongoose = require("mongoose");
 
 app.use(express.json());
 app.use(cors({
@@ -247,17 +248,24 @@ app.post("/withdraw", async (req, res) => {
 });
 
 app.get("/trade-history/:userId", async (req, res) => {
-  const userIdd = req.params.id;
+  const userId = req.params.userId;
 
-  userIdd = userIdd.toString();
+  try {
+    const transactions = await Transaction.find({
+      userId: new mongoose.Types.ObjectId(userId),
+    });
 
-  const user = await Transaction.find({ userId: ObjectId(userIdd) });
+    if (!transactions || transactions.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "No transactions found for this user" });
+    }
 
-  if (!user) {
-    return res.status(404).json({ message: "User not found" });
+    res.status(200).json(transactions);
+  } catch (error) {
+    console.error("Error fetching trade history:", error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
-
-  res.status(200).json(user);
 });
 
 app.post("/changepassword", async (req, res) => {
