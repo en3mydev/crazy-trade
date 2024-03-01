@@ -1,4 +1,4 @@
-<div align='center'><img style="width:30%" src='/src/images/logo/logo.png'/></div>
+<div align='center'><img style="width:30%" src='/src/images/homepage/ctlogo.png'/></div>
 
 # About the project
 
