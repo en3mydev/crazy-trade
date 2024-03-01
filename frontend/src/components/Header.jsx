@@ -82,7 +82,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link onClick={openNav} to="contact">
+              <Link onClick={openNav} to="/">
                 Support
               </Link>
             </li>
@@ -107,7 +107,7 @@ const Header = () => {
       <div className="header__middle">
         <Link to="dashboard/trade">Trade</Link>
         <Link to="dashboard/wallet">Wallet</Link>
-        <Link to="contact">Support</Link>
+        <Link to="/">Support</Link>
       </div>
       {isLoggedIn ? (
         <div className="header__right">

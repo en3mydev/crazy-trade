@@ -38,7 +38,7 @@ const CrpytoCard = ({ name }) => {
   }, [cryptoData]);
 
   return (
-    <Link to={`${name}`} className="crypto-btn">
+    <Link to="/dashboard/trade" className="crypto-btn">
       <img src={cryptoImg} alt="" />
       <h3>{cryptoName}</h3>
       <h4>${cryptoPrice}</h4>
