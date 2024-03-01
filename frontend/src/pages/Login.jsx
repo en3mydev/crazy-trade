@@ -7,6 +7,7 @@ import axios from "axios";
 const Login = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
 
@@ -42,6 +43,7 @@ const Login = () => {
       }
     } catch (error) {
       console.error("Authentication error", error);
+      setErrorMessage("Invalid email or password.");
     }
   };
 
@@ -60,7 +62,7 @@ const Login = () => {
         </div>
         <div className="login-body">
           <form className="login-form">
-            <h2>Log in</h2>
+          {errorMessage ? <h2>{errorMessage}</h2> : <h2>Log in</h2>}
             <input
               type="email"
               placeholder="Enter your email adress"
