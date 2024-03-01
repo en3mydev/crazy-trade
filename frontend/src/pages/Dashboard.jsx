@@ -40,7 +40,11 @@ const Dashboard = () => {
           <Footer />
         </div>
       ) : (
-        <div>Loading...</div>
+        <div class="loader">
+          <li class="ball"></li>
+          <li class="ball"></li>
+          <li class="ball"></li>
+        </div>
       )}
     </div>
   );
