@@ -110,7 +110,8 @@ const WatchlistTable = () => {
       });
       setIsModalOpen(false);
 
-      navigate("/dashboard");
+      navigate("/dashboard/wallet");
+      setTimeout(() => navigate("/dashboard"), 1);
     } catch (error) {
       console.error("Error buying crypto:", error);
     }
