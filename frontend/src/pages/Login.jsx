@@ -1,7 +1,7 @@
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Login = () => {
@@ -9,6 +9,14 @@ const Login = () => {
   const [loginPassword, setLoginPassword] = useState("");
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      navigate("/dashboard");
+    }
+  }, [navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
