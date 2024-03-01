@@ -29,7 +29,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="dashboard">
+    <>
       {dataLoaded ? (
         <div className="dashboard-page">
           <DashboardHeader />
@@ -40,13 +40,15 @@ const Dashboard = () => {
           <Footer />
         </div>
       ) : (
-        <div class="loader">
-          <li class="ball"></li>
-          <li class="ball"></li>
-          <li class="ball"></li>
+        <div className="dashboard">
+          <div class="loader">
+            <li class="ball"></li>
+            <li class="ball"></li>
+            <li class="ball"></li>
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

@@ -22,7 +22,13 @@ const Protected = () => {
 
   if (loading) {
     // Wait until authentication is complete
-    return <div>Loading...</div>;
+    return (
+      <div className="loader">
+        <li className="ball"></li>
+        <li className="ball"></li>
+        <li className="ball"></li>
+      </div>
+    )
   }
 
   return isLoggedIn ? <Outlet /> : <Navigate to="/login" />;
