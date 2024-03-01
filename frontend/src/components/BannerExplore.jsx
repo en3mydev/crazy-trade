@@ -11,7 +11,7 @@ const BannerExplore = () => {
           Simply and securely buy, sell, and manage hundreds of
           cryptocurrencies.
         </h2>
-        <Link to="explore" className="banner-explore__btn">
+        <Link to="/dashboard/trade" className="banner-explore__btn">
           See more assets
         </Link>
       </div>
