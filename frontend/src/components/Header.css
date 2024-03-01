@@ -150,7 +150,6 @@
   color: var(--primary);
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 768px) {
   .header {
     padding: 0 1.8rem;

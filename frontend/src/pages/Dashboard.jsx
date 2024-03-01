@@ -17,7 +17,7 @@ const Dashboard = () => {
         const userId = localStorage.getItem("userId");
         const response = await axios.get(
           `https://crazy-trade-server.vercel.app/user/${userId}`,
-          { withCredentials: true }  // Add this line
+          { withCredentials: true }
         );
         setDataLoaded(true);
       } catch (error) {

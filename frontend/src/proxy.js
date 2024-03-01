@@ -5,7 +5,7 @@ const port = 3000;
 
 cors_proxy
   .createServer({
-    originWhitelist: [], // Allow all origins
+    originWhitelist: [],
     requireHeader: ["origin", "x-requested-with"],
     removeHeaders: ["cookie", "cookie2"],
   })

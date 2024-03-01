@@ -18,7 +18,7 @@
   height: 50px;
   padding-top: 10px;
   margin-bottom: 2px;
-  flex-shrink: 0; /* Added to prevent shrinking */
+  flex-shrink: 0;
   box-sizing: content-box;
 }
 

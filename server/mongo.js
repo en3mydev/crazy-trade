@@ -20,11 +20,11 @@ const customerSchema = new mongoose.Schema({
     {
       type: {
         type: String,
-        enum: ["deposit", "withdrawal", "other"], // Add any other transaction types you may have
+        enum: ["deposit", "withdrawal", "other"],
       },
       amount: Number,
       date: Date,
-      coinId: String, // Add properties related to the transfer (optional, adjust based on your needs)
+      coinId: String,
       cryptoValue: Number,
     },
   ],
@@ -39,7 +39,7 @@ const customerSchema = new mongoose.Schema({
 const transactionSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Customer", // Reference to the "customers" collection
+    ref: "Customer",
   },
   type: {
     type: String,

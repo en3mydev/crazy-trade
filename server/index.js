@@ -25,7 +25,6 @@ app.post("/register", async (req, res) => {
     return res.status(400).json({ message: "Email already exists" });
   }
 
-  // Hash the password with bcrypt
   const hashedPassword = await bcrypt.hash(password, 10);
 
   const data = {
@@ -67,10 +66,9 @@ app.post("/login", async (req, res) => {
     return res.status(400).json({ message: "Invalid email or password" });
   }
 
-  // Generare token pentru autentificare
   const token = generateAuthToken(user);
 
-  res.status(200).json({ token, userId: user._id }); // returnează doar userId în loc de user
+  res.status(200).json({ token, userId: user._id });
 });
 
 app.get("/user/:id", async (req, res) => {
@@ -97,20 +95,17 @@ app.post("/deposit", async (req, res) => {
 
     const updatedBalance = user.balance + parseFloat(amount);
 
-    // Actualizează soldul utilizatorului în baza de date
     await Customer.updateOne(
       { _id: userId },
       { $set: { balance: updatedBalance } }
     );
 
-    // Adaugă o înregistrare în istoricul tranzacțiilor
     user.transactions.push({
-      type: "deposit", // Specify a valid transaction type
+      type: "deposit",
       amount: parseFloat(amount),
       date: new Date(),
     });
 
-    // Salvare document actualizat
     await user.save();
 
     res
@@ -171,7 +166,6 @@ app.post("/transfer", async (req, res) => {
       }
 
       if (existingCrypto.amount === cryptoValue) {
-        // Remove the cryptocurrency from the user's assets if the remaining amount is zero
         user.crypto = user.crypto.filter((c) => c.coinId !== coinId);
       }
 
@@ -222,20 +216,17 @@ app.post("/withdraw", async (req, res) => {
 
     const updatedBalance = user.balance - parseFloat(amount);
 
-    // Actualizează soldul utilizatorului în baza de date
     await Customer.updateOne(
       { _id: userId },
       { $set: { balance: updatedBalance } }
     );
 
-    // Adaugă o înregistrare în istoricul tranzacțiilor
     user.transactions.push({
-      type: "withdrawal", // Specify a valid transaction type
+      type: "withdrawal",
       amount: parseFloat(amount),
       date: new Date(),
     });
 
-    // Salvare document actualizat
     await user.save();
 
     res

@@ -25,11 +25,9 @@ const Login = () => {
       if (response.status === 200) {
         const { token, userId } = response.data;
 
-        // Salvează token-ul și userId în localStorage
         localStorage.setItem("token", token);
         localStorage.setItem("userId", userId);
 
-        // Redirect către dashboard sau altă pagină protejată
         navigate("/dashboard");
       } else {
         console.error("Authentication error");

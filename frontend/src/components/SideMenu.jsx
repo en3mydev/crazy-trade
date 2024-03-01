@@ -37,12 +37,12 @@ const SideMenu = () => {
   ];
 
   const menuStyle = {
-    fontSize: "20px", // Adjust the font size as needed
+    fontSize: "20px",
   };
 
   const iconStyle = {
-    fontSize: "20px", // Adjust the font size as needed for icons
-    marginRight: "8px", // Adjust the margin if necessary
+    fontSize: "20px",
+    marginRight: "8px",
   };
 
   const designTokens = {

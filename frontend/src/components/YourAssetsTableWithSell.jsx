@@ -1,4 +1,3 @@
-// YourAssetsTableWithSell.jsx
 import { Table, Modal, Input } from "antd";
 import axios from "axios";
 import { useEffect, useState } from "react";

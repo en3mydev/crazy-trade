@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     "/api",
     createProxyMiddleware({
-      target: "https://crazy-trade-server.vercel.app", // Change this to your server URL
+      target: "https://crazy-trade-server.vercel.app",
       changeOrigin: true,
       pathRewrite: {
         "^/api": "/api/v3",

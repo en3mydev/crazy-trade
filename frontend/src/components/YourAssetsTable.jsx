@@ -1,4 +1,3 @@
-// YourAssetsTable.jsx
 import { Table } from "antd";
 import { useEffect, useState } from "react";
 
